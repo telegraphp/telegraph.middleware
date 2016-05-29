@@ -1,0 +1,23 @@
+{
+    "name": "relay/middleware",
+    "description": "Telegraph-compatible middleware decorators.",
+    "type": "library",
+    "homepage": "https://github.com/relayphp/Telegraph.Middleware",
+    "license": "MIT",
+    "require": {
+        "psr/http-message": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Telegraph\\Middleware\\": "src/"
+        }
+    },
+    "require-dev": {
+        "zendframework/zend-diactoros": "~1.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Telegraph\\Middleware\\": "tests/"
+        }
+    }
+}
