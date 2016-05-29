@@ -155,6 +155,8 @@ class SessionHeadersHandler
      *
      * Adds a session cookie header to the Response.
      *
+     * @param ResponseInterface $response The HTTP response.
+     *
      * @param string $sessionId The new session ID.
      *
      * @return ResponseInterface
@@ -210,6 +212,8 @@ class SessionHeadersHandler
      *
      * Returns a Response with added cache limiter headers.
      *
+     * @param ResponseInterface $response The HTTP response.
+     *
      * @return ResponseInterface
      *
      */
@@ -233,6 +237,8 @@ class SessionHeadersHandler
      *
      * Returns a Response with 'public' cache limiter headers.
      *
+     * @param ResponseInterface $response The HTTP response.
+     *
      * @return ResponseInterface
      *
      * @see https://github.com/php/php-src/blob/PHP-5.6.20/ext/session/session.c#L1196-L1213
@@ -255,6 +261,8 @@ class SessionHeadersHandler
      *
      * Returns a Response with 'private_no_expire' cache limiter headers.
      *
+     * @param ResponseInterface $response The HTTP response.
+     *
      * @return ResponseInterface
      *
      * @see https://github.com/php/php-src/blob/PHP-5.6.20/ext/session/session.c#L1215-L1224
@@ -275,6 +283,8 @@ class SessionHeadersHandler
      *
      * Returns a Response with 'private' cache limiter headers.
      *
+     * @param ResponseInterface $response The HTTP response.
+     *
      * @return ResponseInterface
      *
      * @see https://github.com/php/php-src/blob/PHP-5.6.20/ext/session/session.c#L1226-L1231
@@ -289,6 +299,8 @@ class SessionHeadersHandler
     /**
      *
      * Returns a Response with 'nocache' cache limiter headers.
+     *
+     * @param ResponseInterface $response The HTTP response.
      *
      * @return ResponseInterface
      *

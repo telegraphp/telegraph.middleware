@@ -46,7 +46,7 @@ class ResponseSender
      *
      * Sends the Response status line.
      *
-     * @return null
+     * @param ResponseInterface $response The HTTP response.
      *
      */
     protected function sendStatus(ResponseInterface $response)
@@ -61,7 +61,7 @@ class ResponseSender
      *
      * Sends all Response headers.
      *
-     * @return null
+     * @param ResponseInterface $response The HTTP response.
      *
      */
     protected function sendHeaders(ResponseInterface $response)
@@ -79,8 +79,6 @@ class ResponseSender
      *
      * @param array $values The values for that header.
      *
-     * @return null
-     *
      */
     protected function sendHeader($name, $values)
     {
@@ -96,7 +94,7 @@ class ResponseSender
      *
      * Streams the Response body 8192 bytes at a time via `echo`.
      *
-     * @return null
+     * @param ResponseInterface $response The HTTP response.
      *
      */
     protected function sendBody(ResponseInterface $response)
