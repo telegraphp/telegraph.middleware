@@ -1,8 +1,8 @@
 {
-    "name": "relay/middleware",
+    "name": "telegraph/middleware",
     "description": "Telegraph-compatible middleware decorators.",
     "type": "library",
-    "homepage": "https://github.com/relayphp/Telegraph.Middleware",
+    "homepage": "https://github.com/telegraphp/telegraph.middleware",
     "license": "MIT",
     "require": {
         "psr/http-message": "~1.0"

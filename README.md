@@ -9,7 +9,7 @@ This package include the following Telegraph-compatible middleware:
 - _ResponseSender_ to send a PSR-7 response
 - _SessionHeadersHandler_ to manage session headers "manually", instead of PHP managing them automatically
 
-This package is installable and PSR-4 autoloadable via Composer as `relay/middleware`.
+This package is installable and PSR-4 autoloadable via Composer as `telegraph/middleware`.
 
 ## ExceptionHandler
 
