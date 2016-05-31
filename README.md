@@ -17,8 +17,8 @@ This package is installable and PSR-4 autoloadable via Composer as
 Similarly, the _ExceptionHandler_ does what it sound like: it catches any
 exceptions that bubble up through the subsequent middleware decorators.
 
-The _ExceptionHandler_ does nothing with the `$request` or `$response`, and
-passes them directly to `$next` inside a `try/catch` block. If no exception
+The _ExceptionHandler_ does nothing with the `$request` , and
+passes it directly to `$next` inside a `try/catch` block. If no exception
 bubbles up, it returns the `$response` from `$next`.  However, if it catches an
 exception, it returns an entirely new `$response` object with the exception
 message and an HTTP 500 status code. It then returns the new `$response` object.
@@ -51,7 +51,7 @@ subsequent middleware decorators.
 The _JsonContentHandler_ checks the incoming request for a method other than
 `GET` and for an `application/json` or `application/vnd.api+json` `Content-Type`
 header. If it finds both of these, it parses the JSON and makes it available as
-the _parsed body_ of the `$request` before passing it and the `$response` to
+the _parsed body_ of the `$request` before passing it to
 `$next`. If the method is `GET` or the `Content-Type` header defines a different
 mime type, the _JsonContentHandler_ ignores the `$request` and continues the
 chain.
@@ -76,8 +76,8 @@ $decodedJsonData = $request->getParsedBody();
 The _ResponseSender_ does just what it sounds like: it sends the PSR-7 response
 object.
 
-The _ResponseSender_ does nothing with the `$request` or `$response`, passing
-them immediately to `$next`. Afterwards, it takes the returned `$response` and
+The _ResponseSender_ does nothing with the `$request`, passing
+it immediately to `$next`. Afterwards, it takes the returned `$response` and
 sends it using `header()` and `echo`, and returns the sent `$response`.
 
 The _ResponseSender_ is intended to go at the top of the Telegraph queue, so
